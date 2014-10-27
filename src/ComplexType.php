@@ -52,7 +52,7 @@ class ComplexType extends Type
       throw new Exception("The class has already been generated");
     }
 
-    $config = Generator::getInstance()->getConfig();
+    $config = PHPGenerator::getInstance()->getConfig();
 
     $class = new PhpClass($this->phpIdentifier, $config->getClassExists());
 
@@ -133,4 +133,3 @@ class ComplexType extends Type
     $this->members[$name] = new Variable($type, $name, $nillable);
   }
 }
-

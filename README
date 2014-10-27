@@ -31,9 +31,9 @@ usage listed under ./wsdl2php -h
 
 Usage code:
 <?php
-require_once __DIR__."/path/here/Generator.php";
+require_once __DIR__."/path/here/PHPGenerator.php";
 
-$generator = Generator::instance();
+$generator = PHPGenerator::instance();
 $generator->setDisplayCallback( function( $msg ) {
 	echo "{$msg}\n";
 });

@@ -26,7 +26,7 @@ require_once dirname(__FILE__).'/../lib/phpSource/PhpFile.php';
  * @author Fredrik Wallgren <fredrik.wallgren@gmail.com>
  * @license http://www.opensource.org/licenses/mit-license.php MIT License
  */
-class Generator
+class PHPGenerator
 {
 
   /**
@@ -87,7 +87,7 @@ class Generator
    * @var displayCallback The function called to display output internally. Initially set to gettext if set
    */
   private $displayCallback;
-  
+
   /**
    * Construct the generator
    */
@@ -107,11 +107,11 @@ class Generator
    */
   public static function instance() {
   	if( self::$instance === null ) {
-  		self::$instance = new Generator();
+  		self::$instance = new PHPGenerator();
   	}
   	return self::$instance;
   }
-  
+
   /**
    * Sets the display callback to an anonymous function, or a string referring to a built-in callable
    *
@@ -130,7 +130,7 @@ class Generator
   	$disp = $this->displayCallback;
   	return $disp( $string );
   }
-  
+
   /**
    * Generates php source code from a wsdl file
    *
@@ -519,4 +519,3 @@ class Generator
     return $typenode;
   }
 }
-

@@ -59,7 +59,7 @@ abstract class Type
     $this->datatype = $datatype;
     $this->identifier = $name;
 
-    $config = Generator::getInstance()->getConfig();
+    $config = PHPGenerator::getInstance()->getConfig();
 
     // Add prefix and suffix
     $name = $config->getPrefix().$this->identifier.$config->getSuffix();
@@ -127,4 +127,3 @@ abstract class Type
     return $this->phpIdentifier;
   }
 }
-
